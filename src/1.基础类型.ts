@@ -61,3 +61,9 @@ const bigint: bigint = BigInt(123);
 // 基础类型
 // string number boolean never void null undefined any 数组 元祖 枚举 symbol bigint object
 export {};
+// type GetRturnType<T> = T extends (...args: any[]) => infer R ? R : never;
+// type Func = (a: number) => number;
+// type Result = GetRturnType<Func>; //number
+// type GetArrayItemType<T extends any[]> = T[1] extends infer R ? R : never;
+// let arr3: [string, number] = ["1", 2];
+// type ArrayItem = GetArrayItemType<typeof arr3>; //number
