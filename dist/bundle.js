@@ -1,16 +1,26 @@
 (function () {
   'use strict';
 
-  // 参数this问题  尽量不使用this来作为函数的上下文 this的缺陷就是类型推导问题
-  // 如果想限制this类型，需要手动限制this的类型
-  function fn(key) {
-      return this[key];
+  class Animal {
+      constructor(name, age) {
+          this.name = name;
+          this.age = age;
+          this.name = name;
+          this.age = age;
+      }
+      get aliasAame() {
+          return `#${this.name}`;
+      }
+      getAge() {
+          return this.age;
+      }
   }
-  const person = {
-      name: "zhangsan",
-      age: 18,
-      address: "beijing",
-  };
-  fn.call(person, "age");
+  class cat extends Animal {
+      constructor(name, age) {
+          super(name, age);
+          console.log(this.age);
+      }
+  }
+  console.log(new cat("cat", 1));
 
 })();
