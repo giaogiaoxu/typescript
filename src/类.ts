@@ -43,7 +43,9 @@ const counter: ICounter = () => {
   return 1;
 };
 counter.count = 1;
-
+interface Func {
+  (): void;
+}
 console.log(counter.count);
 interface IVeg {
   name: string;

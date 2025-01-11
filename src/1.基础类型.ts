@@ -21,11 +21,13 @@ let tuple: [a: string, b: number] = ["1", 2];
 //tuple[1] = "2"; 不能将类型string分配给类型number
 // tuple.push(true);元祖在新增内容的时候 不能增加额外的类型，只能是元祖中的类型，而且无法访问新增的内容
 tuple.push("3");
-// console.log(tuple[3]);长度为2的元祖在索引3处没有元素
+
+//console.log(tuple[3]); //长度为2的元祖在索引3处没有元素
 
 // 枚举类型
 // 维护一组常量的时候
-const enum STATUS { //常量枚举不会额外编译成对象，所以更节约
+// 常量枚举不会额外编译成对象，所以更节约
+const enum STATUS {
   OK = "ok",
   NO_OK = 100,
   NOT_FOUND,
